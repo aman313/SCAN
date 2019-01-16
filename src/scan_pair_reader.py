@@ -35,8 +35,8 @@ class Seq2SeqSCANPairDatasetReader(DatasetReader):
         self._source_token_indexers = source_token_indexers or {"tokens": SingleIdTokenIndexer()}
         self._target_token_indexers = target_token_indexers or self._source_token_indexers
         self._source_add_start_token = source_add_start_token
-        #self._ref_path = ref_path
-        self._ref_path = 'add_prim_split/tasks_train_devremoved_addprim_jump.txt'
+        self._ref_path = ref_path
+        #self._ref_path = 'add_prim_split/tasks_train_devremoved_addprim_jump.txt'
         self._max_ref = max_ref
         self._same_inst_batch = same_inst_batch
         if same_inst_batch and not same_inst_batch_size > 0:
